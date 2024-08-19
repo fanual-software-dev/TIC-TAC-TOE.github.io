@@ -71,8 +71,10 @@ function make_move (id){
                 document.getElementById('span2').innerHTML = '1';
                 document.getElementById('span3').innerHTML = 'wins !';
 
-                const win =  document.getElementById('player1-win')
-                document.getElementById('player1-win').innerHTML = (parseInt(win) + 1 )
+                const win =  document.getElementById('player1-win').innerHTML
+                const win_mini =  document.getElementById('player1-win-mini').innerHTML
+                document.getElementById('player1-win').innerHTML = parseInt(win,10) + 1 
+                document.getElementById('player1-win-mini').innerHTML = parseInt(win_mini,10) + 1 
                 turn = -1
                 moves = 0
                 
@@ -94,8 +96,10 @@ function make_move (id){
 
                 document.getElementById('span2').innerHTML = '2';
                 document.getElementById('span3').innerHTML = 'wins';
-                const win =  document.getElementById('player2-win')
-                document.getElementById('player2-win').innerHTML = parseInt(win)+1
+                const win =  document.getElementById('player2-win').innerHTML
+                document.getElementById('player2-win').innerHTML = parseInt(win,10)+1
+                const win_mini =  document.getElementById('player2-win-mini').innerHTML
+                document.getElementById('player2-win-mini').innerHTML = parseInt(win_mini,10)+1
                 turn = -1;
                 moves = 0;
                 return
@@ -120,6 +124,7 @@ function make_move (id){
         }
     }
 }
+
 
 
 function play_again(){
