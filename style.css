@@ -1,0 +1,420 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    overflow-x: hidden;
+}
+
+body{
+    background-color: rgb(1, 35, 63);
+}
+
+.container{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    /* padding-top: 50px; */
+    align-items: center;
+    gap: 100px;
+    
+}
+
+.header-div{
+    background-color: rgb(7, 224, 231);
+    width: 100%;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+
+}
+
+.header-div h1{
+    text-transform: uppercase;
+    font-family: Poppins;
+    color: rgb(5, 35, 61);
+}
+
+.grid-container{
+    width: 280px;
+    display: grid;
+    grid-template-columns: auto auto auto;
+    grid-template-rows: repeat(3, 1fr);
+    /* column-gap: 5px; */
+    row-gap: 10px;
+
+}
+
+.grid-container div{
+    width: 80px;
+    height: 80px;
+    background-color: rgb(7, 224, 231);
+    box-shadow: 2px 2px 4px rgb(6, 146, 156);
+    border-radius: 6px;
+    cursor: pointer;
+    color: white;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 36px;
+}
+
+/* .grid-container div:hover{
+    background-color: rgb(255, 151, 31);
+} */
+
+.mini-container{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    align-items: center;
+}
+
+.move-div{
+    width: 580px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: linear-gradient(to right,rgb(255, 2, 141),rgb(255, 217, 0));
+    border-radius: 10px;
+    box-shadow: 2px 2px 4px black;
+}
+
+.move-div p{
+    /* text-transform: uppercase; */
+    font-size: 32px;
+    color: white;
+    font-weight: bold;
+    font-family: cursive;
+}
+
+.emojis-container{
+    width: 100%;
+    display: flex;
+    gap: 50px;
+    justify-content: center;
+    align-items: center;
+}
+
+.emoji-divs{
+    width: 200px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+
+}
+
+.emoji-divs p{
+    color: rgb(255, 255, 255);
+    text-shadow: 2px 2px 4px white;
+    font-size: 24px;
+}
+
+
+.replay{
+    width: 200px;
+    height: 40px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    background-color: aquamarine;
+    color: rgb(0, 33, 37);
+    font-weight: bold;
+    font-family: monospace;
+    font-size: 18px;
+    margin-top: 20px;
+}
+
+@media screen and (min-width:450px) and (max-width:500px) {
+    .container{
+        gap: 50px;
+    }
+
+    .header-div{
+        width: 100%;
+        height: 70px;
+        justify-content: start;
+        padding-left: 5%;
+        gap: 5%;
+    }
+    .header-div h1{
+        font-size: 22px;
+    }
+
+    .header-div img{
+        width: 40px;
+        height: 40px;
+    }
+
+    .mini-container{
+        width: 100%;
+    }
+
+    .move-div{
+        width: 90%;
+    }
+
+    .move-div p{
+        font-size: 24px;
+    }
+
+    .emojis-container{
+        width: 100%;
+        gap: 20px;
+        justify-content: center;
+    }
+
+    .emoji-divs{
+        display: none;
+    }
+
+    .grid-container{
+        width: 60%;
+    }
+
+    .grid-container div{
+        width: 80px;
+        height: 80px;
+        font-size: 24px;
+    }
+
+}
+
+@media screen and (min-width:500px) and (max-width:600px) {
+    .container{
+        gap: 50px;
+    }
+
+    .header-div{
+        width: 100%;
+        height: 70px;
+        justify-content: center;
+        padding-left: 5%;
+        gap: 5%;
+    }
+    .header-div h1{
+        font-size: 24px;
+    }
+
+    .header-div img{
+        width: 60px;
+        height: 60px;
+    }
+
+    .mini-container{
+        width: 100%;
+    }
+
+    .move-div{
+        width: 70%;
+    }
+
+    .move-div p{
+        font-size: 32px;
+    }
+
+    .emojis-container{
+        width: 100%;
+        gap: 20px;
+        justify-content: center;
+    }
+
+    .emoji-divs{
+        width: 20%;
+    }
+
+    .emoji-divs p{
+        font-size: 1em;
+    }
+
+    .grid-container{
+        width: 60%;
+    }
+
+    .grid-container div{
+        width: 85px;
+        height: 85px;
+        font-size: 24px;
+    }
+
+}
+
+
+@media screen and (min-width:600px) and (max-width:720px) {
+    .container{
+        gap: 50px;
+    }
+
+    .header-div{
+        width: 100%;
+        height: 70px;
+        justify-content: center;
+        padding-left: 5%;
+        gap: 5%;
+    }
+    .header-div h1{
+        font-size: 24px;
+    }
+
+    .header-div img{
+        width: 60px;
+        height: 60px;
+    }
+
+    .mini-container{
+        width: 100%;
+    }
+
+    .move-div{
+        width: 80%;
+    }
+
+    .move-div p{
+        font-size: 32px;
+    }
+
+    .emojis-container{
+        width: 100%;
+        gap: 20px;
+        justify-content: center;
+    }
+
+    .emoji-divs{
+        width: 20%;
+    }
+
+    .emoji-divs p{
+        font-size: 1em;
+    }
+
+    .grid-container{
+        width: 45%;
+    }
+
+    .grid-container div{
+        width: 85px;
+        height: 85px;
+        font-size: 24px;
+    }
+
+}
+
+@media screen and (max-width:450px) {
+
+    .container{
+        gap: 50px;
+    }
+
+    .header-div{
+        width: 100%;
+        height: 70px;
+        justify-content: start;
+        padding-left: 5%;
+        gap: 5%;
+    }
+    .header-div h1{
+        font-size: 22px;
+    }
+
+    .header-div img{
+        width: 40px;
+        height: 40px;
+    }
+
+    .mini-container{
+        width: 100%;
+    }
+
+    .move-div{
+        width: 90%;
+    }
+
+    .move-div p{
+        font-size: 24px;
+    }
+
+    .emojis-container{
+        width: 100%;
+        gap: 20px;
+        justify-content: center;
+    }
+
+    .emoji-divs{
+        display: none;
+    }
+
+    .grid-container{
+        width: 70%;
+    }
+
+    .grid-container div{
+        width: 78px;
+        height: 78px;
+        font-size: 24px;
+    }
+
+
+    
+}
+
+
+@media screen and (max-width:350px) {
+    .container{
+        gap: 50px;
+    }
+
+    .header-div{
+        width: 100%;
+        height: 70px;
+        justify-content: start;
+        padding-left: 5%;
+        gap: 5%;
+    }
+    .header-div h1{
+        font-size: 16px;
+    }
+
+    .header-div img{
+        width: 40px;
+        height: 40px;
+    }
+
+    .mini-container{
+        width: 100%;
+    }
+
+    .move-div{
+        width: 85%;
+    }
+
+    .move-div p{
+        font-size: 18px;
+    }
+
+    .emojis-container{
+        width: 100%;
+        gap: 20px;
+        justify-content: center;
+    }
+
+    .emoji-divs{
+        display: none;
+    }
+
+    .grid-container{
+        width: 70%;
+    }
+
+    .grid-container div{
+        width: 60px;
+        height: 60px;
+        font-size: 24px;
+    }
+
+}
+
