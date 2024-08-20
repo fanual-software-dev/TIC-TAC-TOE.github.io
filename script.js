@@ -73,12 +73,13 @@ function make_move (id){
                 document.getElementById('span2').innerHTML = '1';
                 document.getElementById('span3').innerHTML = 'wins !';
 
-                const win =  document.getElementById('player1-win').innerHTML
-                const win_mini =  document.getElementById('player1-win-mini').innerHTML
-                document.getElementById('player1-win').innerHTML = parseInt(win,10) + 1 
-                document.getElementById('player1-win-mini').innerHTML = parseInt(win_mini,10) + 1 
-                moves = 0
-                
+                const win =  document.getElementById('player1-win').innerHTML;
+                const win_mini =  document.getElementById('player1-win-mini').innerHTML;
+                document.getElementById('player1-win').innerHTML = parseInt(win,10) + 1;
+                document.getElementById('player1-win-mini').innerHTML = parseInt(win_mini,10) + 1;
+                moves = 0;
+                document.getElementById('cheers1').style.display = 'block';
+        
                 // console.log(check_win(player1))
                 return
                 
@@ -96,14 +97,15 @@ function make_move (id){
             // console.log(player2,'player2')
             
             if (player2.length>=3 && check_win(player2)){
-
+                
                 document.getElementById('span2').innerHTML = '2';
                 document.getElementById('span3').innerHTML = 'wins';
-                const win =  document.getElementById('player2-win').innerHTML
+                const win =  document.getElementById('player2-win').innerHTML;
+                const win_mini =  document.getElementById('player2-win-mini').innerHTML;
                 document.getElementById('player2-win').innerHTML = parseInt(win,10)+1
-                const win_mini =  document.getElementById('player2-win-mini').innerHTML
-                document.getElementById('player2-win-mini').innerHTML = parseInt(win_mini,10)+1
+                document.getElementById('player2-win-mini').innerHTML = parseInt(win_mini,10)+1;
                 moves = 0;
+                document.getElementById('cheers1').style.display = 'block';
                 return
                 
             }
@@ -139,6 +141,7 @@ function play_again(){
     document.getElementById('span1').innerHTML = 'player';
     document.getElementById('span2').innerHTML = '1';
     document.getElementById('span3').innerHTML = 'to move !';
+    document.getElementById('cheers1').style.display = 'none';
 
     
 
