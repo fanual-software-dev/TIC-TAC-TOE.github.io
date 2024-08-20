@@ -61,10 +61,12 @@ function make_move (id){
 
     if (!document.getElementById(id).innerHTML){
 
-        if (turn>=0 && turn%2===0){
+        if (turn%2===0 && !check_win(player1) && !check_win(player2)){
             player1.push(id)
             document.getElementById(id).innerHTML = "X"
             document.getElementById("span2").innerHTML = "2";
+            turn+=1
+            moves+=1 
             // console.log(player1,'player1')
             if (player1.length>=3 && check_win(player1)){
 
@@ -75,7 +77,6 @@ function make_move (id){
                 const win_mini =  document.getElementById('player1-win-mini').innerHTML
                 document.getElementById('player1-win').innerHTML = parseInt(win,10) + 1 
                 document.getElementById('player1-win-mini').innerHTML = parseInt(win_mini,10) + 1 
-                turn = -1
                 moves = 0
                 
                 // console.log(check_win(player1))
@@ -86,10 +87,12 @@ function make_move (id){
             
         }
     
-        else if (turn>=0 && turn%2===1){
+        else if (turn%2===1 && !check_win(player1) && !check_win(player2)){
             player2.push(id)
             document.getElementById(id).innerHTML = "O"
             document.getElementById("span2").innerHTML = "1"
+            turn+=1
+            moves+=1 
             // console.log(player2,'player2')
             
             if (player2.length>=3 && check_win(player2)){
@@ -100,7 +103,6 @@ function make_move (id){
                 document.getElementById('player2-win').innerHTML = parseInt(win,10)+1
                 const win_mini =  document.getElementById('player2-win-mini').innerHTML
                 document.getElementById('player2-win-mini').innerHTML = parseInt(win_mini,10)+1
-                turn = -1;
                 moves = 0;
                 return
                 
@@ -111,15 +113,12 @@ function make_move (id){
         }
 
 
-        turn+=1
-        moves+=1 
-
 
         if (moves===9){
             document.getElementById('span1').innerHTML = 'Opps';
             document.getElementById('span2').innerHTML = 'its';
             document.getElementById('span3').innerHTML = 'a draw !';
-            moves = 0
+            
             return
         }
     }
